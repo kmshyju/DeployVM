@@ -14,12 +14,12 @@ pipeline {
   stages {
    
        stage('Checkout') {
-				stage='Checkout'
-				dir('scriptDir'){
-					checkout scm
-
-          sh 'pwd'
-				}
+         steps{
+         		dir('scriptDir'){
+					  checkout scm
+            sh 'pwd'
+				  }
+         }
     } 
   }
 }
