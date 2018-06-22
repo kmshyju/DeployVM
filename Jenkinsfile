@@ -17,7 +17,7 @@ pipeline {
        steps{
        	dir('scriptDir'){
 					  checkout scm
-            sh 'ls -a'
+            sh 'ls -l'
 				  }
          }
     } 
