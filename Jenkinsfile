@@ -17,7 +17,7 @@ pipeline {
 	checkout scm
         sh 'ls -l'
         sh 'echo $WORKSPACE'
-        sh  'cat scriptDir\rg.tf'
+        sh  'cat "templates\rg.tf"'
 	 }
         }
     } 
