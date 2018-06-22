@@ -17,5 +17,14 @@ pipeline {
         sh 'echo "Inside the docker container"'
       }
     }
+
+    stage('Checkout') {
+				stage='Checkout'
+				dir('scriptDir'){
+					checkout scm
+
+          sh 'pwd'
+				}
+    }
   }
 }
