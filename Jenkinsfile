@@ -17,6 +17,7 @@ pipeline {
 	checkout scm
         sh 'ls -l'
         sh 'echo $WORKSPACE'
+        sh  'cat rg.tf'
 	 }
         }
     } 
