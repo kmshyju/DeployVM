@@ -8,14 +8,18 @@ pipeline {
     environment {
         SPID = credentials('SPID')
         TENANT =  credentials('TENANT')
-        PASSWD = credentials('SSPWD')
+        PASSWD = credentials('SPPWD')
     }
 
   stages {
-    stage('Build') {
-      steps {
-        sh 'echo "Inside the docker container"'
-      }
-    }
+    stage('Checkout'){
+       steps{
+       	dir('scriptDir'){
+					  checkout scm
+            sh 'ls -a'
+            
+				  }
+         }
+    } 
   }
 }
