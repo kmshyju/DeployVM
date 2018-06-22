@@ -8,7 +8,7 @@ pipeline {
     environment {
         SPID = credentials('SPID')
         TENANT =  credentials('TENANT')
-        PASSWD = credentials('SSPWD')
+        PASSWD = credentials('SPPWD')
     }
 
   stages {
