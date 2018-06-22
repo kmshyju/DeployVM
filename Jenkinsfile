@@ -12,19 +12,14 @@ pipeline {
     }
 
   stages {
-    stage('Build') {
-      steps {
-        sh 'echo "Inside the docker container"'
-      }
-    }
-
-    stage('Checkout') {
+   
+       stage('Checkout') {
 				stage='Checkout'
 				dir('scriptDir'){
 					checkout scm
 
           sh 'pwd'
 				}
-    }
+    } 
   }
 }
