@@ -16,6 +16,7 @@ pipeline {
        	dir('scriptDir'){
 	checkout scm
         sh 'ls -l'
+        sh 'echo $WORKSPACE'
 	 }
         }
     } 
