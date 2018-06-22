@@ -18,7 +18,6 @@ pipeline {
        	dir('scriptDir'){
 					  checkout scm
             sh 'ls -a'
-            
 				  }
          }
     } 
